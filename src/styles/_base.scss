@@ -15,7 +15,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: "League Spartan", sans-serif;
-  background-color: $White;
+  background-color: $veryDarkBlueBack;
 }
 
 body {
@@ -24,4 +24,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+}
+
+.container {
+  width: 40rem;
+}
+
+.all-buttons {
+  display: grid;
+  background-color: $veryDarkBlueToggle;
 }
