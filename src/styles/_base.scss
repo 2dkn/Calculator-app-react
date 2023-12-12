@@ -32,5 +32,28 @@ body {
 
 .all-buttons {
   display: grid;
+  background-color: $white;
+  width: 8rem;
+  height: 20rem;
+}
+
+.container-btn {
+  width: 50rem;
+  height: 40rem;
   background-color: $veryDarkBlueToggle;
+  border-radius: 1rem;
+}
+
+.screen {
+  background-color: $veryDarkBlueScreen;
+  width: 50rem;
+  height: 10rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 50rem;
 }

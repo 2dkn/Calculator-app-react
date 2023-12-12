@@ -30,7 +30,30 @@ body {
 
 .all-buttons {
   display: grid;
+  background-color: hsl(0, 0%, 100%);
+  width: 8rem;
+  height: 20rem;
+}
+
+.container-btn {
+  width: 50rem;
+  height: 40rem;
   background-color: hsl(223, 31%, 20%);
+  border-radius: 1rem;
+}
+
+.screen {
+  background-color: hsl(221, 41%, 12%);
+  width: 50rem;
+  height: 10rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 50rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
