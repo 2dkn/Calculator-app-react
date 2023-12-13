@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  width: 40rem;
+  width: 100%;
 }
 
 .calc-buttons {
@@ -44,6 +44,10 @@ body {
   font-size: 2.5rem;
   font-family: $leagueSpartan;
   cursor: pointer;
+}
+
+.calc-buttons:hover {
+  background-color: hsl(30, 37%, 97%);
 }
 
 .calc-buttons:active {
@@ -104,7 +108,7 @@ body {
 .container-btn {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 2rem 0.5rem;
   min-width: 50rem;
   background-color: $veryDarkBlueToggle;
   border-radius: 1rem;
