@@ -28,18 +28,87 @@ body {
   width: 40rem;
 }
 
-.all-buttons {
-  display: grid;
-  background-color: hsl(0, 0%, 100%);
-  width: 8rem;
-  height: 20rem;
+.calc-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%; /* Take full width of the grid cell */
+  height: 5rem;
+  background-color: hsl(30, 25%, 89%); /* Define your button color */
+  box-shadow: 0px 3px 0px hsl(28, 16%, 65%);
+  border-radius: 0.5rem;
+  border: none; /* Remove default button border */
+  color: hsl(223, 31%, 20%); /* Define text color */
+  font-size: 2.5rem;
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+}
+
+.calc-buttons:active {
+  transform: scale(0.95);
+}
+
+.del-button {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 3px 0px hsl(224, 28%, 35%);
+  color: white;
+  cursor: pointer;
+}
+
+.del-button:hover {
+  background-color: hsl(225, 42%, 67%);
+}
+
+.reset-equal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: span 2;
+  width: 93%; /* Take full width of the grid cell */
+  height: 5rem;
+  background-color: hsl(30, 25%, 89%); /* Define your button color */
+  border-radius: 0.5rem;
+  border: none; /* Remove default button border */
+  color: hsl(223, 31%, 20%); /* Define text color */
+  font-size: 2rem; /* Adjust font size as needed */
+  cursor: pointer;
+  font-family: "League Spartan", sans-serif;
+}
+
+.reset-equal:active {
+  transform: scale(0.97);
+}
+
+.reset-button {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: 0px 3px 0px hsl(224, 28%, 35%);
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: hsl(225, 42%, 67%);
+}
+
+.equal-button {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: 0px 3px 0px hsl(6, 70%, 34%);
+  color: white;
+}
+
+.equal-button:hover {
+  background-color: hsl(6, 97%, 66%);
 }
 
 .container-btn {
-  width: 50rem;
-  height: 40rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  min-width: 50rem;
   background-color: hsl(223, 31%, 20%);
   border-radius: 1rem;
+  padding: 2.5rem;
+  justify-items: center;
+  align-items: center;
 }
 
 .screen {
