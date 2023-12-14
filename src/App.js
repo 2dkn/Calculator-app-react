@@ -9,11 +9,13 @@ function App() {
       <div className="header">
         <h3 className="calc">calc</h3>
         <h1>Theme</h1>
-        <input type="radio"></input>
-        <input type="radio"></input>
-        <input type="radio"></input>
+        <div className="color-slider">
+          <input type="radio"></input>
+          <input type="radio"></input>
+          <input type="radio"></input>
+        </div>
       </div>
-      <div className="screen"></div>
+      <div className="screen">399,981</div>
       <div className="container-btn">
         <button className="calc-buttons" onClick={() => onclick()}>
           7
