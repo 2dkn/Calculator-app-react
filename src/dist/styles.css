@@ -26,20 +26,24 @@ body {
 }
 
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 45rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .calc-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%; /* Take full width of the grid cell */
+  width: 90%;
   height: 5rem;
-  background-color: hsl(30, 25%, 89%); /* Define your button color */
+  background-color: hsl(30, 25%, 89%);
   box-shadow: 0px 3px 0px hsl(28, 16%, 65%);
   border-radius: 0.5rem;
-  border: none; /* Remove default button border */
-  color: hsl(222, 35%, 28%); /* Define text color */
+  border: none;
+  color: hsl(222, 35%, 28%);
   font-size: 3.3rem;
   font-family: "League Spartan", sans-serif;
   cursor: pointer;
@@ -71,13 +75,13 @@ body {
   justify-content: center;
   align-items: center;
   grid-column: span 2;
-  width: 95%; /* Take full width of the grid cell */
+  width: 95%;
   height: 5rem;
-  background-color: hsl(30, 25%, 89%); /* Define your button color */
+  background-color: hsl(30, 25%, 89%);
   border-radius: 0.5rem;
-  border: none; /* Remove default button border */
-  color: hsl(223, 31%, 20%); /* Define text color */
-  font-size: 2rem; /* Adjust font size as needed */
+  border: none;
+  color: hsl(223, 31%, 20%);
+  font-size: 2rem;
   cursor: pointer;
   font-family: "League Spartan", sans-serif;
   padding-top: 0.5rem;
@@ -140,8 +144,75 @@ body {
 .header {
   display: flex;
   flex-direction: row;
-  width: 50rem;
+  width: 95%;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+}
+
+.calc {
+  font-size: 32px;
+  color: hsl(0, 0%, 100%);
+}
+
+h1 {
+  padding-left: 24rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  width: 95%;
+  font-size: 1.2rem;
+  gap: 1.3rem;
+  padding-right: 0.8rem;
+  color: white;
+  padding-bottom: 0.4rem;
+}
+
+.color-slider {
+  display: flex;
+  position: relative;
+  background: hsl(223, 35%, 22%);
+  border-radius: 1rem;
+  height: 23px;
+  width: 60px;
   justify-content: space-around;
+  cursor: pointer;
+  color: red;
+  align-items: center;
+}
+
+.color-slider input[type=radio] {
+  display: none;
+}
+
+.color-slider label {
+  display: flex;
+  align-content: center;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#color1:checked + label[for=color1] {
+  background-color: hsl(6, 63%, 50%);
+}
+
+#color2:checked + label[for=color2] {
+  background-color: hsl(25, 98%, 40%);
+}
+
+#color3:checked + label[for=color3] {
+  background-color: hsl(176, 100%, 44%);
 }
 
 /*# sourceMappingURL=styles.css.map */

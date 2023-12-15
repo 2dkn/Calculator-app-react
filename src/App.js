@@ -2,17 +2,61 @@ import React, { useState } from "react";
 import "./styles/main.scss";
 
 function App() {
-  // const [displayValue, setDisplayValue] = useState("0");
+  const [selectedColor, setSelectedColor] = useState("color1");
+
+  const handleColorChange = (e) => {
+    setSelectedColor(e.target.id);
+  };
 
   return (
     <div className="container">
+      {/* <div className="header">
+        <h3 className="calc">calc</h3>
+        <h1>THEME</h1>
+        <div className="color-slider">
+          <input type="radio" id="color1" name="color"></input>
+          <label htmlFor="color1"></label>
+          <input type="radio" id="color2" name="color"></input>
+          <label htmlFor="color2"></label>
+          <input type="radio" id="color3" name="color"></input>
+          <label htmlFor="color3"></label>
+        </div>
+      </div> */}
+      <div className="numbers">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+      </div>
       <div className="header">
         <h3 className="calc">calc</h3>
-        <h1>Theme</h1>
+        <h1>THEME</h1>
         <div className="color-slider">
-          <input type="radio"></input>
-          <input type="radio"></input>
-          <input type="radio"></input>
+          <input
+            type="radio"
+            id="color1"
+            name="color"
+            checked={selectedColor === "color1"}
+            onChange={handleColorChange}
+          />
+          <label htmlFor="color1"></label>
+
+          <input
+            type="radio"
+            id="color2"
+            name="color"
+            checked={selectedColor === "color2"}
+            onChange={handleColorChange}
+          />
+          <label htmlFor="color2"></label>
+
+          <input
+            type="radio"
+            id="color3"
+            name="color"
+            checked={selectedColor === "color3"}
+            onChange={handleColorChange}
+          />
+          <label htmlFor="color3"></label>
         </div>
       </div>
       <div className="screen">399,981</div>
