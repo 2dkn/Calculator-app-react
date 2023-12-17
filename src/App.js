@@ -1,27 +1,54 @@
 import React, { useState } from "react";
 import "./styles/main.scss";
 
-function App() {
-  const [selectedColor, setSelectedColor] = useState("color1");
+// Define ToggleSwitch component outside App component
+function ToggleSwitch() {
+  const [selectedState, setSelectedState] = useState(1);
 
-  const handleColorChange = (e) => {
-    setSelectedColor(e.target.id);
+  const handleToggle = () => {
+    setSelectedState((prevState) => {
+      // Logic to toggle between three states (1, 2, 3)
+      if (prevState === 1) {
+        return 2;
+      } else if (prevState === 2) {
+        return 3;
+      } else {
+        return 1;
+      }
+    });
   };
 
   return (
+    <div className="color-slider" onClick={handleToggle}>
+      <div className={`slider-position pos-${selectedState}`} />
+      <input
+        type="radio"
+        id="color1"
+        name="color"
+        checked={selectedState === 1}
+        readOnly
+      />
+      <input
+        type="radio"
+        id="color2"
+        name="color"
+        checked={selectedState === 2}
+        readOnly
+      />
+      <input
+        type="radio"
+        id="color3"
+        name="color"
+        checked={selectedState === 3}
+        readOnly
+      />
+    </div>
+  );
+}
+
+function App() {
+  return (
     <div className="container">
-      {/* <div className="header">
-        <h3 className="calc">calc</h3>
-        <h1>THEME</h1>
-        <div className="color-slider">
-          <input type="radio" id="color1" name="color"></input>
-          <label htmlFor="color1"></label>
-          <input type="radio" id="color2" name="color"></input>
-          <label htmlFor="color2"></label>
-          <input type="radio" id="color3" name="color"></input>
-          <label htmlFor="color3"></label>
-        </div>
-      </div> */}
       <div className="numbers">
         <p>1</p>
         <p>2</p>
@@ -30,34 +57,7 @@ function App() {
       <div className="header">
         <h3 className="calc">calc</h3>
         <h1>THEME</h1>
-        <div className="color-slider">
-          <input
-            type="radio"
-            id="color1"
-            name="color"
-            checked={selectedColor === "color1"}
-            onChange={handleColorChange}
-          />
-          <label htmlFor="color1"></label>
-
-          <input
-            type="radio"
-            id="color2"
-            name="color"
-            checked={selectedColor === "color2"}
-            onChange={handleColorChange}
-          />
-          <label htmlFor="color2"></label>
-
-          <input
-            type="radio"
-            id="color3"
-            name="color"
-            checked={selectedColor === "color3"}
-            onChange={handleColorChange}
-          />
-          <label htmlFor="color3"></label>
-        </div>
+        <ToggleSwitch />
       </div>
       <div className="screen">399,981</div>
       <div className="container-btn">

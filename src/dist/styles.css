@@ -184,34 +184,37 @@ h1 {
   width: 60px;
   justify-content: space-around;
   cursor: pointer;
+  overflow: hidden;
   color: red;
   align-items: center;
 }
 
-.color-slider input[type=radio] {
+.color-slider input {
   display: none;
-}
-
-.color-slider label {
-  display: flex;
-  align-content: center;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background-color: #ccc;
   cursor: pointer;
-  transition: transform 0.3s ease;
 }
 
-#color1:checked + label[for=color1] {
+.slider-position {
+  position: absolute;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 50%;
+}
+
+.pos-1 {
+  transform: translateX(-115%);
   background-color: hsl(6, 63%, 50%);
 }
 
-#color2:checked + label[for=color2] {
+.pos-2 {
+  transform: translateX(0%);
   background-color: hsl(25, 98%, 40%);
 }
 
-#color3:checked + label[for=color3] {
+.pos-3 {
+  transform: translateX(115%);
   background-color: hsl(176, 100%, 44%);
 }
 
