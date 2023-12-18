@@ -168,7 +168,7 @@ h1 {
 .numbers {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end; // sass/scss need to use flex-end and not just end
   width: 95%;
   font-size: 1.2rem;
   gap: 1.3rem;
@@ -220,3 +220,7 @@ h1 {
   transform: translateX(115%);
   background-color: $keyColorCyan;
 }
+
+// Theme 2 for slider
+
+// Theme 3 for slider

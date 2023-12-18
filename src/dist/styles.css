@@ -166,7 +166,7 @@ h1 {
 .numbers {
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   width: 95%;
   font-size: 1.2rem;
   gap: 1.3rem;
