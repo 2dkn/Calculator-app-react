@@ -54,20 +54,14 @@ function App({ type, onClick, theme, handleClick }) {
 function ToggleSwitch() {
   const [selectedState, setSelectedState] = useState(1);
 
-  const handleToggle = () => {
-    setSelectedState((prevState) => {
-      //  Logic to toggle between three states (1, 2, 3) might change to click individually
-      if (prevState === 1) {
-        // onThemeChange("theme-1");
-        return 2;
-      } else if (prevState === 2) {
-        // onThemeChange("theme-2");
-        return 3;
-      } else {
-        // onThemeChange("theme-3");
-        return 1;
-      }
-    });
+  const handleToggle = (e) => {
+    const value = parseInt(e.target.value);
+    if (!isNaN(value)) {
+      // Check if parsed value is not NaN
+      setSelectedState(value);
+    } else {
+      // Handle invalid input (e.g., log a warning or display an error message)
+    }
   };
 
   return (
@@ -77,21 +71,27 @@ function ToggleSwitch() {
         type="radio"
         id="color1"
         name="color"
+        value={1}
         checked={selectedState === 1}
+        onChange={handleToggle}
         readOnly
       />
       <input
         type="radio"
         id="color2"
         name="color"
+        value={2}
         checked={selectedState === 2}
+        onChange={handleToggle}
         readOnly
       />
       <input
         type="radio"
         id="color3"
         name="color"
+        value={3}
         checked={selectedState === 3}
+        onChange={handleToggle}
         readOnly
       />
     </div>
@@ -119,8 +119,20 @@ const Button = ({ value, type, onClick, theme }) => (
 const CalculatorButtons = ({ theme, value, calculation, setCalculation }) => {
   // Define handleClick here
   const handleClick = (value) => {
-    setCalculation(value);
+    setCalculation((prevCalculation) => prevCalculation + value);
   };
+
+  const handleDelClick = () => {
+    setCalculation((prevCalculation) => prevCalculation.slice(0, -1));
+  };
+
+  // const handlePlusClick = () => {};
+  // const handleMinusClick = () => {};
+  // const handleMultiClick = () => {};
+  // const handleDivideClick = () => {};
+  // const handleDecimalClick = () => {};
+  // const handleResetClick = () => {};
+  // const handleEqualClick = () => {};
 
   return (
     <div className={`container-btn ${theme}`}>
@@ -129,7 +141,9 @@ const CalculatorButtons = ({ theme, value, calculation, setCalculation }) => {
           key={i}
           value={item.value}
           type={item.type}
-          onClick={() => handleClick(item.value)}
+          onClick={
+            item.type === "del" ? handleDelClick : () => handleClick(item.value)
+          }
           theme={theme}
         />
       ))}

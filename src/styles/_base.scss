@@ -134,7 +134,7 @@ body {
   background-color: $veryDarkBlueScreen;
   width: 95%;
   min-width: 12rem;
-  min-height: 12rem;
+  min-height: 12rem; // regular height cause problems when need to expand. use min-height.
   margin-bottom: 3rem;
   border-radius: 1rem;
   color: white;
@@ -146,11 +146,16 @@ body {
   // text-align: end;
   word-break: break-all;
   // direction: ltr; // this changes how the text comes in right to left or left to right.
-  padding-right: 2rem;
+  // padding-right: 2rem;
 }
 
 .calc-numbers {
-  position: relative;
+  // position: relative;
+  display: flex;
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2.5rem;
 }
 
 .header {
@@ -202,7 +207,8 @@ h1 {
 }
 
 .color-slider input {
-  display: none;
+  // display: none; // causing problems when trying to hide it
+  opacity: 0; // opacity was a better option for this
   cursor: pointer;
 }
 

@@ -141,11 +141,14 @@ body {
   flex-direction: column;
   align-items: flex-end;
   word-break: break-all;
-  padding-right: 2rem;
 }
 
 .calc-numbers {
-  position: relative;
+  display: flex;
+  padding-left: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 2.5rem;
 }
 
 .header {
@@ -197,7 +200,7 @@ h1 {
 }
 
 .color-slider input {
-  display: none;
+  opacity: 0;
   cursor: pointer;
 }
 
