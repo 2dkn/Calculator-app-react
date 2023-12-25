@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as mathjs from "mathjs";
+// import * as mathjs from "mathjs";
 import "./styles/main.scss";
 
 const buttonData = [
@@ -121,18 +121,39 @@ const CalculatorButtons = ({ theme, value, calculation, setCalculation }) => {
   const handleClick = (value) => {
     setCalculation((prevCalculation) => prevCalculation + value);
   };
-
+  // Handles the logic for each type of button you click
   const handleDelClick = () => {
     setCalculation((prevCalculation) => prevCalculation.slice(0, -1));
   };
 
-  // const handlePlusClick = () => {};
-  // const handleMinusClick = () => {};
-  // const handleMultiClick = () => {};
-  // const handleDivideClick = () => {};
-  // const handleDecimalClick = () => {};
-  // const handleResetClick = () => {};
-  // const handleEqualClick = () => {};
+  const handlePlusClick = () => {
+    setCalculation((prevCalculation) => prevCalculation + "+");
+  };
+  const handleMinusClick = () => {
+    setCalculation((prevCalculation) => prevCalculation + "-");
+  };
+  const handleMultiClick = () => {
+    setCalculation((prevCalculation) => prevCalculation + "*");
+  };
+  const handleDivideClick = () => {
+    setCalculation((prevCalculation) => prevCalculation + "/");
+  };
+  const handleDecimalClick = () => {
+    setCalculation((prevCalculatin) => prevCalculatin + ".");
+  };
+  const handleResetClick = () => {
+    setCalculation("");
+  };
+  const handleEqualClick = () => {
+    try {
+      const result = eval(calculation);
+      setCalculation(result.toString()); // Update the calculation state with the result
+    } catch (error) {
+      // Handle errors or invalid calculations here
+      console.error("Invalid calculation:", error);
+      setCalculation("Error"); // Display an error message or handle the error as needed
+    }
+  };
 
   return (
     <div className={`container-btn ${theme}`}>
@@ -142,7 +163,23 @@ const CalculatorButtons = ({ theme, value, calculation, setCalculation }) => {
           value={item.value}
           type={item.type}
           onClick={
-            item.type === "del" ? handleDelClick : () => handleClick(item.value)
+            item.type === "del"
+              ? handleDelClick
+              : item.type === "operator" && item.value === "+"
+              ? handlePlusClick
+              : item.type === "operator" && item.value === "-"
+              ? handleMinusClick
+              : item.type === "operator" && item.value === "x"
+              ? handleMultiClick
+              : item.type === "operator" && item.value === "/"
+              ? handleDivideClick
+              : item.type === "operator" && item.value === "."
+              ? handleDecimalClick
+              : item.type === "function" && item.value === "RESET"
+              ? handleResetClick
+              : item.type === "operator" && item.value === "="
+              ? handleEqualClick
+              : () => handleClick(item.value)
           }
           theme={theme}
         />
