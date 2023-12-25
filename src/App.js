@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import * as mathjs from "mathjs";
+import * as math from "mathjs";
 import "./styles/main.scss";
 
 const buttonData = [
@@ -145,13 +145,22 @@ const CalculatorButtons = ({ theme, value, calculation, setCalculation }) => {
     setCalculation("");
   };
   const handleEqualClick = () => {
+    // Not the safe way to do
+    // try {
+    //   const result = eval(calculation);
+    //   setCalculation(result.toString()); // Update the calculation state with the result
+    // } catch (error) {
+    //   // Handle errors or invalid calculations here
+    //   console.error("Invalid calculation:", error);
+    //   setCalculation("Error"); // Display an error message or handle the error as needed
+    // }
+
     try {
-      const result = eval(calculation);
-      setCalculation(result.toString()); // Update the calculation state with the result
+      const result = math.evaluate(calculation);
+      setCalculation(result.toString());
     } catch (error) {
-      // Handle errors or invalid calculations here
       console.error("Invalid calculation:", error);
-      setCalculation("Error"); // Display an error message or handle the error as needed
+      setCalculation("Error");
     }
   };
 
