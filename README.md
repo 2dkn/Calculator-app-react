@@ -21,7 +21,7 @@ Your users should be able to:
 
 ### Screenshot
 
-![Design preview for the Calculator App coding challenge]()
+![Design preview for the Calculator App coding challenge](/design/CalculatorReactPic2.png)
 
 ### Links
 

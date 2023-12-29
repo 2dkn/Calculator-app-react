@@ -15,7 +15,6 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: "League Spartan", sans-serif;
-  background-color: $veryDarkBlueBack;
 }
 
 body {
@@ -25,12 +24,13 @@ body {
   align-content: center;
   height: 100vh;
   margin: 0;
+  background-color: $veryDarkBlueBack;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  width: 45rem;
+  width: 50rem;
   justify-content: center;
   align-items: center;
   // height: 100vh;
@@ -236,7 +236,101 @@ h1 {
   transform: translateX(115%);
   background-color: $keyColorCyan;
 }
+// Theme 1 for slider
 
 // Theme 2 for slider
 
+.theme-2 {
+  .container {
+    background-color: yellow;
+  }
+  .calc-buttons {
+    background-color: $keyColorEgg;
+    box-shadow: 0px 3px 0px $keyShadowEgg;
+    color: white;
+  }
+
+  .calc-buttons:hover {
+  }
+
+  .del-button {
+    background-color: $keyBackgroundColor2;
+    box-shadow: $keyShadowColor2;
+  }
+
+  .del-button:hover {
+  }
+
+  .reset-equal {
+  }
+
+  .reset-button {
+  }
+
+  .equal-button {
+  }
+
+  .equal-button:hover {
+  }
+
+  .container-btn {
+  }
+
+  .screen {
+  }
+
+  .calc {
+  }
+
+  h1 {
+  }
+  .numbers {
+  }
+
+  .color-slider {
+  }
+}
+
 // Theme 3 for slider
+.theme-3 {
+  .calc-buttons {
+  }
+
+  .calc-buttons:hover {
+  }
+
+  .del-button {
+  }
+
+  .del-button:hover {
+  }
+
+  .reset-equal {
+  }
+
+  .reset-button {
+  }
+
+  .equal-button {
+  }
+
+  .equal-button:hover {
+  }
+
+  .container-btn {
+  }
+
+  .screen {
+  }
+
+  .calc {
+  }
+
+  h1 {
+  }
+  .numbers {
+  }
+
+  .color-slider {
+  }
+}

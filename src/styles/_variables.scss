@@ -22,18 +22,18 @@ $white: hsl(0, 0%, 100%);
 // Theme 2
 // Background 2
 
-$lightGrayBackground: hsl(0, 0%, 90%);
-$grayish: hsl(0, 5%, 81%);
+$lightGrayBackground: hsl(0, 0%, 90%); // key
+$grayish: hsl(0, 5%, 81%); // key pad background color
 $veryLightGray: hsl(0, 0%, 93%);
 
 // Keys 2
 
-$keyBackgroundColor2: hsl(185, 42%, 37%);
-$keyShadowColor2: hsl(185, 58%, 25%);
-$keyColorOrange: hsl(25, 98%, 40%);
-$keyShadowOrange: hsl(25, 99%, 27%);
-$keyColorEgg: hsl(45, 7%, 89%);
-$keyShadowEgg: hsl(35, 11%, 61%);
+$keyBackgroundColor2: hsl(185, 42%, 37%); // reset/del sign
+$keyShadowColor2: hsl(185, 58%, 25%); // reset/del sign shadow
+$keyColorOrange: hsl(25, 98%, 40%); // equal sign
+$keyShadowOrange: hsl(25, 99%, 27%); // equal shadow sign
+$keyColorEgg: hsl(45, 7%, 89%); // number keys
+$keyShadowEgg: hsl(35, 11%, 61%); // number keys shadow
 
 // Text 2
 

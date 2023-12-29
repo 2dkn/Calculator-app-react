@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as math from "mathjs";
 import "./styles/main.scss";
 
@@ -27,6 +27,10 @@ function App({ type, onClick, theme, handleClick }) {
   const [currentTheme, setCurrentTheme] = useState("theme-1");
   const [calculation, setCalculation] = useState("");
 
+  const handleThemeChange = (theme) => {
+    setCurrentTheme(theme);
+  };
+
   return (
     <div className={`container ${currentTheme}`}>
       <div className={`numbers ${currentTheme}`}>
@@ -37,10 +41,12 @@ function App({ type, onClick, theme, handleClick }) {
       <div className={`header ${currentTheme}`}>
         <h3 className={`calc ${currentTheme}`}>calc</h3>
         <h1 className={currentTheme}>THEME</h1>
-        <ToggleSwitch />
+        <ToggleSwitch setCurrentTheme={handleThemeChange} />
       </div>
       <div className={`screen ${currentTheme}`}>
-        <div className="calc-numbers">{calculation || "0"}</div>
+        <div className={`calc-numbers ${currentTheme}`}>
+          {calculation || "0"}
+        </div>
       </div>
       <CalculatorButtons
         theme={currentTheme}
@@ -51,7 +57,7 @@ function App({ type, onClick, theme, handleClick }) {
   );
 }
 
-function ToggleSwitch() {
+function ToggleSwitch({ currentTheme, setCurrentTheme }) {
   const [selectedState, setSelectedState] = useState(1);
 
   const handleToggle = (e) => {
@@ -59,14 +65,29 @@ function ToggleSwitch() {
     if (!isNaN(value)) {
       // Check if parsed value is not NaN
       setSelectedState(value);
+
+      // Update the theme based on the selected state
+      switch (value) {
+        case 1:
+          setCurrentTheme("theme-1");
+          break;
+        case 2:
+          setCurrentTheme("theme-2");
+          break;
+        case 3:
+          setCurrentTheme("theme-3");
+          break;
+        default:
+          break;
+      }
     } else {
       // Handle invalid input (e.g., log a warning or display an error message)
     }
   };
 
   return (
-    <div className="color-slider" onClick={handleToggle}>
-      <div className={`slider-position pos-${selectedState}`} />
+    <div className={`color-slider ${currentTheme}`} onClick={handleToggle}>
+      <div className={`slider-position pos-${selectedState} ${currentTheme}`} />
       <input
         type="radio"
         id="color1"
