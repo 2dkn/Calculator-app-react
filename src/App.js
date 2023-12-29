@@ -31,6 +31,16 @@ function App({ type, onClick, theme, handleClick }) {
     setCurrentTheme(theme);
   };
 
+  useEffect(() => {
+    if (currentTheme === "theme-1") {
+      document.body.style.backgroundColor = ""; // Reset to default background color
+    } else if (currentTheme === "theme-2") {
+      document.body.style.backgroundColor = "hsl(0, 0%, 90%)";
+    } else if (currentTheme === "theme-3") {
+      document.body.style.backgroundColor = "hsl(268, 75%, 9%)";
+    }
+  }, [currentTheme]);
+
   return (
     <div className={`container ${currentTheme}`}>
       <div className={`numbers ${currentTheme}`}>
