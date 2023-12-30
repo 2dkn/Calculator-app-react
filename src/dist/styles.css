@@ -228,17 +228,140 @@ h1 {
   background-color: hsl(176, 100%, 44%);
 }
 
-.theme-2 .container {
-  background-color: yellow;
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  justify-self: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(241, 241, 241);
+  font-weight: 700;
 }
+
+.footer a {
+  color: hsl(6, 63%, 50%);
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.footer a:hover {
+  color: chocolate;
+}
+
 .theme-2 .calc-buttons {
   background-color: hsl(45, 7%, 89%);
   box-shadow: 0px 3px 0px hsl(35, 11%, 61%);
-  color: white;
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 .calc-buttons:hover {
+  background-color: hsl(40, 100%, 99%);
 }
 .theme-2 .del-button {
   background-color: hsl(185, 42%, 37%);
-  box-shadow: hsl(185, 58%, 25%);
+  box-shadow: 0px 3px 0px hsl(185, 58%, 25%);
+  color: hsl(0, 0%, 100%);
+}
+.theme-2 .del-button:hover {
+  background-color: hsl(185, 41%, 50%);
+}
+.theme-2 .reset-equal {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0px 3px 0px hsl(25, 99%, 27%);
+}
+.theme-2 .reset-button {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0px 3px 0px hsl(185, 58%, 25%);
+  color: hsl(0, 0%, 100%);
+}
+.theme-2 .reset-button:hover {
+  background-color: hsl(185, 41%, 50%);
+}
+.theme-2 .equal-button {
+  color: hsl(0, 0%, 100%);
+}
+.theme-2 .equal-button:hover {
+  background-color: hsl(25, 97%, 61%);
+}
+.theme-2 .container-btn {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme-2 .screen {
+  background-color: hsl(0, 0%, 93%);
+}
+.theme-2 .calc {
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 .calc-numbers {
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 h1 {
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 .numbers {
+  color: hsl(60, 10%, 19%);
+}
+.theme-2 .color-slider {
+  background-color: hsl(0, 5%, 81%);
+}
+.theme-2 .footer {
+  color: hsl(60, 10%, 19%);
+}
+
+.theme-3 .calc-buttons {
+  background-color: hsl(268, 47%, 21%);
+  color: hsl(52, 100%, 62%);
+  box-shadow: 0px 3px 0px hsl(290, 70%, 36%);
+}
+.theme-3 .calc-buttons:hover {
+  background-color: hsl(268, 59%, 41%);
+}
+.theme-3 .del-button {
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px hsl(285, 91%, 52%);
+}
+.theme-3 .del-button:hover {
+  background-color: hsl(281, 89%, 38%);
+}
+.theme-3 .reset-equal {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0px 3px 0px hsl(177, 92%, 70%);
+}
+.theme-3 .reset-button {
+  background-color: hsl(281, 89%, 26%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3px 0px hsl(285, 91%, 52%);
+}
+.theme-3 .reset-button:hover {
+  background-color: hsl(281, 89%, 38%);
+}
+.theme-3 .equal-button {
+  color: hsl(223, 31%, 20%);
+}
+.theme-3 .equal-button:hover {
+  background-color: hsl(176, 100%, 60%);
+}
+.theme-3 .container-btn {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme-3 .screen {
+  background-color: hsl(268, 71%, 12%);
+}
+.theme-3 .calc {
+  color: hsl(52, 100%, 62%);
+}
+.theme-3 .calc-numbers {
+  color: hsl(52, 100%, 62%);
+}
+.theme-3 h1 {
+  color: hsl(52, 100%, 62%);
+}
+.theme-3 .numbers {
+  color: hsl(52, 100%, 62%);
+}
+.theme-3 .color-slider {
+  background-color: hsl(268, 71%, 12%);
 }
 
 /*# sourceMappingURL=styles.css.map */

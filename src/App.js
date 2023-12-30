@@ -55,7 +55,7 @@ function App({ type, onClick, theme, handleClick }) {
       </div>
       <div className={`screen ${currentTheme}`}>
         <div className={`calc-numbers ${currentTheme}`}>
-          {calculation || "0"}
+          {calculation || "399,981"}
         </div>
       </div>
       <CalculatorButtons
@@ -63,6 +63,17 @@ function App({ type, onClick, theme, handleClick }) {
         calculation={calculation}
         setCalculation={setCalculation}
       />
+      <div class="footer">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Frontend Mentor
+        </a>
+        . Coded by <a href="https://github.com/2dkn">Kevin Neely</a>
+      </div>
     </div>
   );
 }

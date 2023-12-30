@@ -130,6 +130,9 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 31.25em) {
+}
+
 .screen {
   background-color: $veryDarkBlueScreen;
   width: 95%;
@@ -236,101 +239,175 @@ h1 {
   transform: translateX(115%);
   background-color: $keyColorCyan;
 }
-// Theme 1 for slider
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  justify-self: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.5rem;
+  color: rgba(241, 241, 241);
+  font-weight: 700;
+}
+
+.footer a {
+  color: $keyColorRed;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.footer a:hover {
+  color: chocolate;
+}
 
 // Theme 2 for slider
 
 .theme-2 {
-  .container {
-    background-color: yellow;
-  }
   .calc-buttons {
     background-color: $keyColorEgg;
     box-shadow: 0px 3px 0px $keyShadowEgg;
-    color: white;
+    color: $veryDarkYellow;
   }
 
   .calc-buttons:hover {
+    background-color: hsl(40, 100%, 99%);
   }
 
   .del-button {
     background-color: $keyBackgroundColor2;
-    box-shadow: $keyShadowColor2;
+    box-shadow: 0px 3px 0px $keyShadowColor2;
+    color: $white2;
   }
 
   .del-button:hover {
+    background-color: hsl(185, 41%, 50%);
   }
 
   .reset-equal {
+    background-color: $keyColorOrange;
+    box-shadow: 0px 3px 0px $keyShadowOrange;
   }
 
   .reset-button {
+    background-color: $keyBackgroundColor2;
+    box-shadow: 0px 3px 0px $keyShadowColor2;
+    color: $white2;
+  }
+
+  .reset-button:hover {
+    background-color: hsl(185, 41%, 50%);
   }
 
   .equal-button {
+    color: $white2;
   }
 
   .equal-button:hover {
+    background-color: hsl(25, 97%, 61%);
   }
 
   .container-btn {
+    background-color: $grayish;
   }
 
   .screen {
+    background-color: $veryLightGray;
   }
 
   .calc {
+    color: $veryDarkYellow;
+  }
+
+  .calc-numbers {
+    color: $veryDarkYellow;
   }
 
   h1 {
+    color: $veryDarkYellow;
   }
   .numbers {
+    color: $veryDarkYellow;
   }
 
   .color-slider {
+    background-color: $grayish;
+  }
+
+  .footer {
+    color: $veryDarkYellow;
   }
 }
 
 // Theme 3 for slider
 .theme-3 {
   .calc-buttons {
+    background-color: $veryDarkViolet;
+    color: $lightYellow;
+    box-shadow: 0px 3px 0px $darkMagenta;
   }
 
   .calc-buttons:hover {
+    background-color: hsl(268, 59%, 41%);
   }
 
   .del-button {
+    background-color: $keyBackgroundColor3;
+    color: $white3;
+    box-shadow: 0px 3px 0px $keyShadowColor3;
   }
 
   .del-button:hover {
+    background-color: hsl(281, 89%, 38%);
   }
 
   .reset-equal {
+    background-color: $keyColorCyan;
+    box-shadow: 0px 3px 0px $keyShadowCyan;
   }
 
   .reset-button {
+    background-color: $keyBackgroundColor3;
+    color: $white3;
+    box-shadow: 0px 3px 0px $keyShadowColor3;
+  }
+
+  .reset-button:hover {
+    background-color: hsl(281, 89%, 38%);
   }
 
   .equal-button {
+    color: $veryDarkBlueToggle;
   }
 
   .equal-button:hover {
+    background-color: hsl(176, 100%, 60%);
   }
 
   .container-btn {
+    background-color: $veryDarkVioletToggle;
   }
 
   .screen {
+    background-color: $veryDarkVioletToggle;
   }
 
   .calc {
+    color: $lightYellow;
+  }
+
+  .calc-numbers {
+    color: $lightYellow;
   }
 
   h1 {
+    color: $lightYellow;
   }
   .numbers {
+    color: $lightYellow;
   }
 
   .color-slider {
+    background-color: $veryDarkVioletToggle;
   }
 }
