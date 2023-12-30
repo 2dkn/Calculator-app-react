@@ -33,7 +33,7 @@ function App({ type, onClick, theme, handleClick }) {
 
   useEffect(() => {
     if (currentTheme === "theme-1") {
-      document.body.style.backgroundColor = ""; // Reset to default background color
+      document.body.style.backgroundColor = ""; // "" Resets to default background color
     } else if (currentTheme === "theme-2") {
       document.body.style.backgroundColor = "hsl(0, 0%, 90%)";
     } else if (currentTheme === "theme-3") {
@@ -83,11 +83,11 @@ function ToggleSwitch({ currentTheme, setCurrentTheme }) {
 
   const handleToggle = (e) => {
     const value = parseInt(e.target.value);
+    // Checks if parsed value is not NaN(Not a Number)
     if (!isNaN(value)) {
-      // Check if parsed value is not NaN
       setSelectedState(value);
 
-      // Update the theme based on the selected state
+      // Updates the theme based on the selected state
       switch (value) {
         case 1:
           setCurrentTheme("theme-1");

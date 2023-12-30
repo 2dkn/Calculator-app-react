@@ -52,6 +52,12 @@ body {
   padding-top: 0.5rem;
 }
 
+@media screen and (max-width: 31.25em) {
+  .calc-buttons {
+    width: 85%;
+    min-height: 6rem;
+  }
+}
 .calc-buttons:hover {
   background-color: hsl(30, 37%, 97%);
 }
@@ -89,6 +95,11 @@ body {
   padding-top: 0.5rem;
 }
 
+@media screen and (max-width: 31.25em) {
+  .reset-equal {
+    min-height: 6.5rem;
+  }
+}
 .reset-equal:active {
   transform: scale(0.97);
 }
@@ -127,6 +138,11 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 31.25em) {
+  .container-btn {
+    width: 70%;
+  }
+}
 .screen {
   background-color: hsl(221, 41%, 12%);
   width: 95%;
@@ -143,6 +159,11 @@ body {
   word-break: break-all;
 }
 
+@media screen and (max-width: 31.25em) {
+  .screen {
+    width: 70%;
+  }
+}
 .calc-numbers {
   display: flex;
   padding-left: 2.5rem;
@@ -159,6 +180,12 @@ body {
   padding-bottom: 2.5rem;
 }
 
+@media screen and (max-width: 31.25em) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
 .calc {
   font-size: 32px;
   color: hsl(0, 0%, 100%);
@@ -173,6 +200,12 @@ h1 {
   color: hsl(0, 0%, 100%);
 }
 
+@media screen and (max-width: 31.25em) {
+  h1 {
+    padding-left: 16rem;
+    padding-right: 4rem;
+  }
+}
 .numbers {
   display: flex;
   flex-direction: row;
@@ -185,6 +218,11 @@ h1 {
   padding-bottom: 0.4rem;
 }
 
+@media screen and (max-width: 31.25em) {
+  .numbers {
+    width: 70%;
+  }
+}
 .color-slider {
   display: flex;
   position: relative;
@@ -239,6 +277,12 @@ h1 {
   font-weight: 700;
 }
 
+@media screen and (max-width: 31.25em) {
+  .footer {
+    margin-top: 1rem;
+    font-size: 1.35rem;
+  }
+}
 .footer a {
   color: hsl(6, 63%, 50%);
   cursor: pointer;
