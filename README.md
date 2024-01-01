@@ -25,8 +25,8 @@ Your users should be able to:
 
 ### Links
 
-- Solution URL: [Solution Site]()
-- Live Site URL: [Live Site]()
+- Solution URL: [Solution Site](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29/hub)
+- Live Site URL: [Live Site](https://calculator-app-react-2dkn.netlify.app/)
 
 ### Built With
 
