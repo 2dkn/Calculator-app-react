@@ -55,7 +55,7 @@ function App({ type, onClick, theme, handleClick }) {
       </div>
       <div className={`screen ${currentTheme}`}>
         <div className={`calc-numbers ${currentTheme}`}>
-          {calculation || "399,981"}
+          {calculation || "0"}
         </div>
       </div>
       <CalculatorButtons
@@ -117,6 +117,7 @@ function ToggleSwitch({ currentTheme, setCurrentTheme }) {
         checked={selectedState === 1}
         onChange={handleToggle}
         readOnly
+        aria-label="Color 1"
       />
       <input
         type="radio"
@@ -126,6 +127,7 @@ function ToggleSwitch({ currentTheme, setCurrentTheme }) {
         checked={selectedState === 2}
         onChange={handleToggle}
         readOnly
+        aria-label="Color 2"
       />
       <input
         type="radio"
@@ -135,6 +137,7 @@ function ToggleSwitch({ currentTheme, setCurrentTheme }) {
         checked={selectedState === 3}
         onChange={handleToggle}
         readOnly
+        aria-label="Color 3"
       />
     </div>
   );
